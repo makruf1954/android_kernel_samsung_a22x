@@ -1738,7 +1738,6 @@ static void mt_fm_exit(void)
 	}
 }
 
-#ifdef MTK_WCN_REMOVE_KERNEL_MODULE
 int mtk_wcn_fm_init(void)
 {
 	return mt_fm_init();
@@ -1750,10 +1749,7 @@ void mtk_wcn_fm_exit(void)
 	mt_fm_exit();
 }
 EXPORT_SYMBOL(mtk_wcn_fm_exit);
-#else
-module_init(mt_fm_init);
-module_exit(mt_fm_exit);
-#endif
+
 EXPORT_SYMBOL(g_dbg_level);
 MODULE_LICENSE("GPL");
 MODULE_DESCRIPTION("MediaTek FM Driver");

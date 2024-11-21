@@ -6458,9 +6458,6 @@ static void exitWlan(void)
 
 }				/* end of exitWlan() */
 
-#if ((MTK_WCN_HIF_SDIO == 1) && (CFG_BUILT_IN_DRIVER == 1)) || \
-	((MTK_WCN_HIF_AXI == 1) && (CFG_BUILT_IN_DRIVER == 1))
-
 int mtk_wcn_wlan_gen4_init(void)
 {
 	return initWlan();
@@ -6472,14 +6469,3 @@ void mtk_wcn_wlan_gen4_exit(void)
 	return exitWlan();
 }
 EXPORT_SYMBOL(mtk_wcn_wlan_gen4_exit);
-
-#elif ((MTK_WCN_HIF_SDIO == 0) && (CFG_BUILT_IN_DRIVER == 1))
-
-device_initcall(initWlan);
-
-#else
-
-module_init(initWlan);
-module_exit(exitWlan);
-
-#endif

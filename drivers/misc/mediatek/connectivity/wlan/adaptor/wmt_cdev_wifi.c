@@ -909,4 +909,3 @@ void mtk_wcn_wmt_wifi_exit(void)
 	return WIFI_exit();
 }
 EXPORT_SYMBOL(mtk_wcn_wmt_wifi_exit);
-
