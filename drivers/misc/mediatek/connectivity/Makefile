@@ -58,9 +58,6 @@ export MTK_ANDROID_EMI=y
 export WIFI_IP_SET=1
 export MTK_WLAN_SERVICE=yes
 export CONNAC_VER=1_0
-
-# Do build-in for xxx.c checking
-subdir-ccflags-y += -D MTK_WCN_REMOVE_KERNEL_MODULE
 endif
 
 obj-$(CONFIG_MTK_COMBO) += common/
