@@ -5,8 +5,8 @@ GREEN='\033[0;32m'
 NC='\033[0m'
 
 # add kernelsu
-if [ ! -d "$(pwd)/KernelSU" ]; then
-    curl -LSs "https://raw.githubusercontent.com/rsuntk/KernelSU/main/kernel/setup.sh" | bash -s main
+if [ ! -d "$(pwd)/KernelSU-Next" ]; then
+    curl -LSs "https://raw.githubusercontent.com/sidex15/KernelSU-Next/next-susfs/kernel/setup.sh" | bash -
 else
     echo -e "${GREEN}[!]kernelsu ready.... ${NC}"
 fi
